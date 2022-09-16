@@ -8,6 +8,6 @@ import (
 
 type User interface {
 	CreateUser(user model.NewUser) *model.User
-	GetUser(id uuid.UUID) *model.User
+	GetUser(id uuid.UUID) (*model.User, error)
 	ListUser() []*model.User
 }

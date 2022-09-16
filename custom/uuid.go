@@ -8,17 +8,17 @@ import (
 	"github.com/google/uuid"
 )
 
-func MarshalUUID(b uuid.UUID) graphql.Marshaler {
+func MarshalCustomUUID(b uuid.UUID) graphql.Marshaler {
 	return graphql.WriterFunc(func(w io.Writer) {
-		bytes, _ := b.MarshalBinary()
-		w.Write(bytes)
+		toWrite := fmt.Sprintf("%q", b.String())
+		w.Write([]byte(toWrite))
 	})
 }
 
-func UnmarshalUUID(v interface{}) (uuid.UUID, error) {
+func UnmarshalCustomUUID(v interface{}) (uuid.UUID, error) {
 	switch v := v.(type) {
-	case uuid.UUID:
-		return v, nil
+	case string:
+		return uuid.MustParse(v), nil
 	default:
 		return uuid.Nil, fmt.Errorf("%T is not a UUID", v)
 	}

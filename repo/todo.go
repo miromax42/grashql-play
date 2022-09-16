@@ -7,7 +7,8 @@ import (
 )
 
 type Todo interface {
-	CreateTODO(todo model.NewTodo) *model.Todo
-	GetTODO(id uuid.UUID) *model.Todo
+	CreateTODO(todo model.NewTodo) (*model.Todo, error)
+	GetTODO(id uuid.UUID) (*model.Todo, error)
+	UpdateTODO(todo model.UpdateTodo) (*model.Todo, error)
 	ListTODO() []*model.Todo
 }

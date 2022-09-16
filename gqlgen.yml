@@ -52,7 +52,7 @@ autobind:
 models:
   ID:
     model:
-      - github.com/miromax42/grashql-play/custom/uuid.UUID
+      - github.com/miromax42/grashql-play/custom.CustomUUID
   Int:
     model:
       - github.com/99designs/gqlgen/graphql.Int

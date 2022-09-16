@@ -5,7 +5,6 @@ package graph
 
 import (
 	"context"
-	"fmt"
 
 	"github.com/miromax42/grashql-play/graph/generated"
 	"github.com/miromax42/grashql-play/graph/model"
@@ -13,12 +12,12 @@ import (
 
 // CreateTodo is the resolver for the createTodo field.
 func (r *mutationResolver) CreateTodo(ctx context.Context, input model.NewTodo) (*model.Todo, error) {
-	return r.todoRepo.CreateTODO(input), nil
+	return r.todoRepo.CreateTODO(input)
 }
 
 // UpdateTodo is the resolver for the updateTodo field.
 func (r *mutationResolver) UpdateTodo(ctx context.Context, input model.UpdateTodo) (*model.Todo, error) {
-	panic(fmt.Errorf("not implemented: UpdateTodo - updateTodo"))
+	return r.todoRepo.UpdateTODO(input)
 }
 
 // CreateUser is the resolver for the createUser field.

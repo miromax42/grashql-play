@@ -3,7 +3,7 @@ package repo
 import (
 	"github.com/google/uuid"
 
-	"gql-play/graph/model"
+	"github.com/miromax42/grashql-play/graph/model"
 )
 
 type User interface {

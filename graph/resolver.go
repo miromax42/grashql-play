@@ -1,8 +1,8 @@
 package graph
 
 import (
-	"gql-play/repo"
-	"gql-play/repo/array"
+	"github.com/miromax42/grashql-play/repo"
+	"github.com/miromax42/grashql-play/repo/array"
 )
 
 // This file will not be regenerated automatically.

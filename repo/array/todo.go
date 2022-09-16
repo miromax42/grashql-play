@@ -3,8 +3,8 @@ package array
 import (
 	"github.com/google/uuid"
 
-	"gql-play/graph/model"
-	"gql-play/repo"
+	"github.com/miromax42/grashql-play/graph/model"
+	"github.com/miromax42/grashql-play/repo"
 )
 
 type TODO struct {

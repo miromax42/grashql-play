@@ -1,4 +1,4 @@
-module gql-play
+module github.com/miromax42/grashql-play
 
 go 1.18
 

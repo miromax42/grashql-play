@@ -7,8 +7,8 @@ import (
 	"context"
 	"fmt"
 
-	"gql-play/graph/generated"
-	"gql-play/graph/model"
+	"github.com/miromax42/grashql-play/graph/generated"
+	"github.com/miromax42/grashql-play/graph/model"
 )
 
 // CreateTodo is the resolver for the createTodo field.

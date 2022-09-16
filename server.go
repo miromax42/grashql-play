@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"os"
 
-	"gql-play/graph"
-	"gql-play/graph/generated"
+	"github.com/miromax42/grashql-play/graph"
+	"github.com/miromax42/grashql-play/graph/generated"
 
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
